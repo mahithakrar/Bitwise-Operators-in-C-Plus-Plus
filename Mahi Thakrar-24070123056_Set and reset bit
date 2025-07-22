@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int i=34,bit_to_be_set,set,reset,bit_to_be_reset;//34=00100010
+    
+    cout<<"Enter the bit position to be set : "<<endl;
+    cin>>bit_to_be_set;
+    set=i | (1<<bit_to_be_set);
+    
+    cout<<"Enter the bit position to be reset : "<<endl;
+    cin>>bit_to_be_reset;
+    reset=i&(~(1<<bit_to_be_reset));
+    
+    cout<<"Your number after setting is : "<<set<<endl;
+    cout<<"Your number after resetting is : "<<reset<<endl;
+    
+    return 0;
+}
+
+//Enter the bit position to be set : 
+//3
+//Enter the bit position to be reset : 
+//5
+//Your number after setting is : 42
+//Your number after resetting is : 2
